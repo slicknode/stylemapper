@@ -1,13 +1,13 @@
 # Slicknode Stylemapper
 
-Easily create styled and strictly typed React components and simplify your component code.
+Easily create styled, strictly typed React components and simplify your component code.
 
-Stylemapper is a small, zero-dependency utility that provides an easy and flexible way to **add CSS classes to React components**. Writing logic for dynamically changing CSS classes based on props or state becomes unnecessary. It makes your component code simpler and the management and maintenance of your style and design system seamless:
+Stylemapper is a small, flexible and zero-dependency utility to **add CSS classes to React components**. It eliminates the boilerplate you usually need for changing styles based on state, define typescript definitions, etc. This simplifies the creation and maintenance of your style and design system:
 
 - Get **strictly typed components** without writing Typescript prop type definitions (Stylemapper infers types automatically)
-- Have a **single source of truth for your styles** instead of spreading classnames all over your React components
 - Automatically create **variant props** without complicating your component code (success/error, large/medium etc.)
 - **Add styles to 3rd party libraries** without manually creating wrapper components, type definitions, etc.
+- Have a **single source of truth for your styles** instead of spreading classnames all over your React components
 
 Works especially great with utility based CSS frameworks like [Tailwind CSS](https://tailwindcss.com/).
 
