@@ -1,11 +1,10 @@
 {
-  "name": "stylemapper",
+  "name": "@slicknode/stylemapper",
   "version": "0.1.0",
   "private": false,
-  "description": "",
+  "description": "Flexible utility to create styled and type-safe React components",
   "source": "src/index.ts",
   "main": "dist/index.js",
-  "module": "dist/index.module.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",

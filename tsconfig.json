@@ -7,7 +7,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "commonjs",
     "declaration": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
