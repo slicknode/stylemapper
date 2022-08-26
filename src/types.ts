@@ -30,10 +30,10 @@ export type StyledComponentProps<TConfig extends any[]> = (TConfig[0] extends {
         keyof TConfig[0]['variants'][K]
       >;
     }
-  : Record<string, unknown>) &
+  : unknown) &
   (TConfig extends [first: any, ...rest: infer V]
     ? StyledComponentProps<V>
-    : Record<string, unknown>);
+    : unknown);
 
 export type StrictValue<T> = T extends number
   ? T
