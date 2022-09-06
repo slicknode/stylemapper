@@ -1,6 +1,6 @@
 {
   "name": "@slicknode/stylemapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "Flexible utility to create styled and type-safe React components",
   "source": "src/index.ts",
