@@ -1,20 +1,19 @@
 {
   "name": "@slicknode/stylemapper",
   "version": "0.1.1",
-  "private": false,
   "description": "Flexible utility to create styled and type-safe React components",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
-    "prepublish": "yarn clean",
+    "prepublish": "npm run clean && npm run build",
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src && prettier --check src",
     "format": "prettier --write src/ package.json",
-    "version": "yarn version"
+    "version": "npm version"
   },
   "author": "Slicknode LLC",
   "license": "MIT",
