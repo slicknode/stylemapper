@@ -52,14 +52,11 @@ export function styled<
     React.ComponentPropsWithoutRef<TComponent>
   >((props, ref) => {
     const className = React.useMemo<string | undefined>(() => {
+      const resolvedProps = { ...preparedConfig.defaultProps, ...props };
       // Add variant classes
       let classNames = preparedConfig.variantProps.reduce((acc, propName) => {
         const propValue =
-          propName in props
-            ? props[propName]
-            : propName in preparedConfig.defaultProps
-            ? preparedConfig.defaultProps[propName]
-            : undefined;
+          propName in resolvedProps ? resolvedProps[propName] : undefined;
         if (String(propValue) in preparedConfig.variantClasses[propName]) {
           return acc.concat(
             preparedConfig.variantClasses[propName][String(propValue)]
@@ -74,7 +71,7 @@ export function styled<
         // If all compound variable props match, add the classNames
         return Object.keys(variantProps).every(
           (propName) =>
-            String(props[propName]) === String(variantProps[propName])
+            String(resolvedProps[propName]) === String(variantProps[propName])
         )
           ? acc.concat(className)
           : acc;

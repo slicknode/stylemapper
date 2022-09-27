@@ -231,6 +231,38 @@ describe('styled', () => {
     expect(component).toHaveClass(classOpen);
   });
 
+  it('sets compound classes via defaultVariants', () => {
+    const classOpen = 'open';
+    const classClosed = 'closed';
+    const classOpenSuccess = 'open-success';
+    const StyledComponent = styled(TestComponent, {
+      variants: {
+        open: {
+          true: classOpen,
+          false: classClosed,
+        },
+        success: {
+          true: '',
+          false: '',
+        },
+      },
+      compoundVariants: [
+        {
+          open: true,
+          success: true,
+          className: classOpenSuccess,
+        },
+      ],
+      defaultVariants: {
+        open: true,
+        success: true,
+      },
+    });
+    const { getByText } = render(<StyledComponent />);
+    const component = getByText('closed');
+    expect(component).toHaveClass(classOpenSuccess);
+  });
+
   it('handles forwardRef props for intrinsic HTML elements', () => {
     const PLACEHOLDER_TEXT = 'some placeholder';
     const class1 = 'class1';
