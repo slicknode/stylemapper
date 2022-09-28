@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
-    "prepublish": "npm run clean && npm run build",
+    "prepare": "npm run clean && npm run build",
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
