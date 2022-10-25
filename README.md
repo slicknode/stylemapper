@@ -1,5 +1,9 @@
 # Slicknode Stylemapper
 
+[![npm version](https://badge.fury.io/js/@slicknode%2Fstylemapper.svg)](https://www.npmjs.com/package/@slicknode/stylemapper)
+[![Test Coverage](https://badgen.net/codecov/c/github/slicknode/stylemapper)](https://app.codecov.io/github/slicknode/stylemapper)
+[![License](https://badgen.net/github/license/slicknode/stylemapper)](https://github.com/slicknode/stylemapper/blob/main/LICENSE)
+
 Easily create styled, strictly typed React components and simplify your component code.
 
 Stylemapper is a small, flexible and zero-dependency utility to **add CSS classes to React components**. It eliminates the boilerplate you usually need for changing styles based on state, define typescript definitions, etc. This simplifies the creation and maintenance of your style and design system:
@@ -40,18 +44,6 @@ const App = () => {
     </Menu>
   );
 };
-```
-
-### IntelliSense for Tailwind CSS
-
-If you are using the offical [TailwindCSS extension for VSCode](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss), you can enable intellisense for style mapper by updating your [settings](https://code.visualstudio.com/docs/getstarted/settings):
-
-```json
-{
-  "tailwindCSS.experimental.classRegex": [
-    ["styled\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ]
-}
 ```
 
 ### Variants
@@ -241,6 +233,18 @@ const StyledComponent = styled(
     },
   }
 );
+```
+
+### IntelliSense for Tailwind CSS
+
+If you are using the offical [TailwindCSS extension for VSCode](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss), you can enable intellisense for style mapper by updating your [settings](https://code.visualstudio.com/docs/getstarted/settings):
+
+```json
+{
+  "tailwindCSS.experimental.classRegex": [
+    ["styled\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ]
+}
 ```
 
 ## Credits

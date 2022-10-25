@@ -21,11 +21,31 @@ describe('styled', () => {
     render(<StyledComponent test={true} />);
   });
 
+  it('forwards props that have no variant classes', () => {
+    const className = 'test-class';
+    const StyledComponent = styled(TestComponent, {});
+    const { getByText } = render(
+      <StyledComponent open={true} className={className} />
+    );
+
+    const label = getByText('open');
+    expect(label).toHaveClass(className);
+  });
+
   it('adds className via configuration', () => {
     const className = 'some-class';
     const StyledComponent = styled(TestComponent, className);
     const { container } = render(<StyledComponent />);
     expect(container.firstChild).toHaveClass(className);
+  });
+
+  it('combines multiple classnames via configurations', () => {
+    const className1 = 'some-class1';
+    const className2 = 'some-class2';
+    const StyledComponent = styled(TestComponent, className1, className2);
+    const { container } = render(<StyledComponent />);
+    expect(container.firstChild).toHaveClass(className1);
+    expect(container.firstChild).toHaveClass(className2);
   });
 
   it('adds className via configuration + prop', () => {
@@ -210,6 +230,23 @@ describe('styled', () => {
     const { getByText } = render(<StyledComponent open={true} />);
     const component = getByText('open');
     expect(component).toHaveClass(classOpen);
+  });
+
+  it('ignores variant props classes with missing prop', () => {
+    const classOpen = 'open';
+    const classClosed = 'closed';
+    const StyledComponent = styled(TestComponent, {
+      variants: {
+        open: {
+          true: classOpen,
+          false: classClosed,
+        },
+      },
+    });
+    const { getByText } = render(<StyledComponent />);
+    const component = getByText('closed');
+    expect(component).not.toHaveClass(classOpen);
+    expect(component).not.toHaveClass(classClosed);
   });
 
   it('sets classes via defaultVariants', () => {
