@@ -1,8 +1,11 @@
 # Slicknode Stylemapper
 
 [![npm version](https://badge.fury.io/js/@slicknode%2Fstylemapper.svg)](https://www.npmjs.com/package/@slicknode/stylemapper)
+[![Build passing](https://github.com/slicknode/stylemapper/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/slicknode/stylemapper/actions/workflows/main.yml)
 [![Test Coverage](https://badgen.net/codecov/c/github/slicknode/stylemapper)](https://app.codecov.io/github/slicknode/stylemapper)
 [![License](https://badgen.net/github/license/slicknode/stylemapper)](https://github.com/slicknode/stylemapper/blob/main/LICENSE)
+[![Dependency Count](https://badgen.net/bundlephobia/dependency-count/@slicknode/stylemapper)](https://www.npmjs.com/package/@slicknode/stylemapper)
+[![Types included](https://badgen.net/npm/types/@slicknode/stylemapper)](https://www.npmjs.com/package/@slicknode/stylemapper)
 
 Easily create styled, strictly typed React components and simplify your component code.
 
